@@ -1,5 +1,5 @@
 {
-  "name": "todo-list",
+  "name": "my-spaceship-app",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmanimashaun/To-do-List.git"
+    "url": "git+git+https://github.com/fmanimashaun/my-spaceship-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fmanimashaun/To-do-List/issues"
+    "url": "https://github.com/fmanimashaun/my-spaceship-app/issues"
   },
-  "homepage": "https://github.com/fmanimashaun/To-do-List#readme",
+  "homepage": "https://github.com/fmanimashaun/my-spaceship-app#readme",
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/plugin-transform-modules-commonjs": "^7.19.6",
