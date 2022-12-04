@@ -1,59 +1,45 @@
 ![](https://img.shields.io/badge/fmanimashaun-green)
+![](https://img.shields.io/badge/francis3400-blue)
+![](https://img.shields.io/badge/gealsanchez-red)
 
-# To Do list
+# Leaderboard
 
-## Overview
+## 📗 Table of Contents
 
-In this project, I built a simple HTML list of To Do tasks with focus on it structure using Javascript to load the html elements dynamically. In  addition, I implemented the CRUD (create, read, update, delete) methods as a way to add, remove or update the task list. This simple web page was built using webpack and served by a webpack dev server.
+- [📖 Overview](#about-project)
+  - [Project Objectives](#project-objectives)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-## Project Objectives (Work-in-progress)
 
-### Page Structure
-
-- [x] A new project was setup with webpack that is based on the [webpack exercise](https://github.com/fmanimashaun/webpack-boilerplate) completed earlier.
-- [x] Create an index.html file and write your HTML markup here. Create an empty To Do List placeholder using `<div>` element. The index.html file was set as a template using the HTML Webpack Plugin.
-- [x] Create an index.js file and set an array of some simple to do tasks (array of objects). Each task object should contain three keys:
-
-    i.    description [`string`]
-    
-    ii.   completed [`bool`]
-    
-    iii.  index: [`number`]
-
-- [x] Created a function to iterate over the tasks array and populate an HTML list item element for each task.
-- [x] On page load render the dynamically created list of tasks in the dedicated placeholder. The list appear in order of the index values for each task.
-- [x] Create a style.css and set rules for the To Do List. CSS was loaded by Webpack Style/CSS Loader.
+## 📖 Overview <a name="about-project"></a>
 
 
-### Page add & remove functionality
+### Project Objectives <a name="project-objectives"></a>
 
-- [x] Create a new JavaScript file for the new functionality.
-- [x] Implement a function for adding a new task (add a new element to the array).
-- [x] Implement a function for deleting a task (remove an element from the array).
-- [x] Implement a function for editing task descriptions.
-- [x] By default new tasks should have the property completed set to false and the property index set to the value of the new array length (i.e. if you're adding a 5th task to the list, the index of that task should equal to 5).
-- [x] Deleting a task updates all remaining items' indexes, so they represent the current list order and are unique(i.e. if we delete the first task index 1 from the list, the index of the next task(2) will set to 1)..
-- [x] All changes to the To Do List should be saved in local storage.
 
-## DEMO LINK
+## 🛠 Built With <a name="built-with"></a>
 
-> [Live Demo Link](https://fmanimashaun.github.io/To-do-List/)
-
-## Screenshots
-
-<h3 align="center">Screenhot</h3>
-<p align="center">
-  <img width="500" src="screenshot/demo.png">
-</P>
-
-## Built With
+### Tech Stack <a name="tech-stack"></a>
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [JavaScript/ES6](https://262.ecma-international.org/6.0/)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [webpack 5](https://webpack.js.org/)
 - [npm](https://www.npmjs.com/)
-- [VS Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com)
 - [Stylelinter](https://stylelint.io/)
@@ -61,38 +47,50 @@ In this project, I built a simple HTML list of To Do tasks with focus on it stru
 - [Webhint](https://webhint.io/)
 - [Lighthouse](https://ethcar.github.io/lighthouse/)
 - [SASS](https://sass-lang.com/)
+- [API](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3)
 
-## Getting Started
+### Key Features <a name="key-features"></a>
+
+- [x] Use ES6 modules, with import and export.
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> [Live Demo Link](https://fmanimashaun.github.io/my-spaceship-app/)
+> [Video Demo Link](#)
+
+<p align="center">
+  <img width="500" src="#">
+</P>
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 - [Optional] Install git bash to your machine to enable you to clone this repo.
 - install Visual Studio to be able to host a local live version.
 - Install a browser to view the local live version.
 
 To get a local copy up and running follow these simple example steps.
+### Setup <a name="setup"></a>
 
-### Prerequisites
+- Open your GitHub account the repository's [link](https://github.com/fmanimashaun/my-spaceship-app)
+
+### Prerequisites <a name="prerequisites"></a>
 
 - Internet connection
 - A github account
+### Install <a name="install"></a>
 
-### Setup
+- copy the repo's link and clone it by writing `git clone https://github.com/fmanimashaun/my-spaceship-app.git` on your git bash terminal.
+- `npm install` to install the dependencies.
 
-- Open your GitHub account the repository's [link](https://github.com/fmanimashaun/To-do-List)
-
-### Install
-
-- copy the repo's link and clone it by writing `git clone https://github.com/fmanimashaun/To-do-List.git` on your git bash terminal.
-- `npm install` to install the dependencies
-
-### Run tests
+### Run tests <a name="run-tests"></a>
 
 - You can check for errors by running linter tests found in the github flows.
 
-### Deployment
+### Deployment <a name="deployment"></a>
 
 - run `npm run start` to run it locally.
 
-## Authors
+## Authors <a name="authors"></a>
 
 👤 **Engr. Animashaun Fisayo**
 
@@ -101,16 +99,27 @@ To get a local copy up and running follow these simple example steps.
 - [LinkedIn](https://www.linkedin.com/in/fmanimashaun/)
 - [Website](https://fmanimashaun.com)
 
-## 🤝 Contributing
+👤 **Gerson Sanchez**
+
+- [GitHub](https://github.com/gealsanchez)
+- [Twitter](https://twitter.com/gealsanchez)
+- [LinkedIn](https://www.linkedin.com/in/gerson-sanchez-88309b57/)
+
+👤 **Francis Uche**
+
+- [GitHub](https://github.com/francis3400)
+- [Twitter](https://twitter.com/francisBlinkz)
+- [LinkedIn](https://www.linkedin.com/in/francis-uche-888675213)
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+## ⭐️ Show your suppor <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
-## 📝 License
-
+## 📝 License <a name="license"></a>
 This project is [MIT](./LICENSE) licensed.
