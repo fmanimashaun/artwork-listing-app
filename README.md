@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/francis3400-blue)
 ![](https://img.shields.io/badge/gealsanchez-red)
 
-# Leaderboard
+# My Spaceship App (API-based webapp)
 
 ## 📗 Table of Contents
 
@@ -27,6 +27,8 @@
 
 
 ## 📖 Overview <a name="about-project"></a>
+
+This group capstone project focuses on building a single-page web application based on an external API, webpack 5, and sass to list spaceships. The application is designed to be a listing of spaceships that features a Home page which lists the spaceships. Each listing allows the user to "like" the item using an Involvement API, as well as to engage in more detail with a popup window that provides more data about the item, such as the ability to comment on it, or reserve it for a period of time. The application is designed to be responsive across all screen sizes, and utilizes webpack 5 in order to optimize the speed of loading and allow for easy integration with sass for styling. Additionally, it is designed with user experience in mind, with all pages building upon the Home page and allowing the user to engage with the content in a more continuous manner. Overall, this project provides a unique and enjoyable experience for users to list spaceships and engage with them in a variety of ways.
 
 
 ### Project Objectives <a name="project-objectives"></a>
