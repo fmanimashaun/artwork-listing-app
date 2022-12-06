@@ -2,12 +2,14 @@
 ![](https://img.shields.io/badge/francis3400-blue)
 ![](https://img.shields.io/badge/gealsanchez-red)
 
-# My Spaceship App (API-based webapp)
+# Artwork Listing App (API-based webapp)
 
 ## 📗 Table of Contents
 
 - [📖 Overview](#about-project)
-  - [Project Objectives](#project-objectives)
+  - [Project Requirements](#project-requirements)
+    - [API](#api)
+    - [User Stories](#user-stories) 
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -27,35 +29,28 @@
 
 ## 📖 Overview <a name="about-project"></a>
 
-This group capstone project focuses on building a single-page web application based on an external API, webpack 5, and sass to list spaceships. The application is designed to be a listing of spaceships that features a Home page which lists the spaceships. Each listing allows the user to "like" the item using an Involvement API, as well as to engage in more detail with a popup window that provides more data about the item, such as the ability to comment on it, or reserve it for a period of time. The application is designed to be responsive across all screen sizes, and utilizes webpack 5 in order to optimize the speed of loading and allow for easy integration with sass for styling. Additionally, it is designed with user experience in mind, with all pages building upon the Home page and allowing the user to engage with the content in a more continuous manner. Overall, this project provides a unique and enjoyable experience for users to list spaceships and engage with them in a variety of ways.
+This project will be a group capstone project to create a single-page web application based on the Art Institute of Chicago's API. The application will be built with webpack 5 and Sass, and provide an intuitive user interface to view artworks from the Art Institute of Chicago. Additionally, the application will use Jest to test all JavaScript functions. 
 
-### Project Objectives <a name="project-objectives"></a>
+The project involves developing a web application from scratch. As part of this, the group will need to research and familiarize themselves with the Art Institute of Chicago's API, as well as webpack 5 and Sass. The group will then implement a functional design with an intuitive user interface, HTML formatting, and stylesheet creation. Furthermore, the project will incorporate testing with Jest. 
 
-**APIs**
+By the end of the project, the team should have a completed web application that allows users to view artifacts from the Art Institute of Chicago, with the code tested using Jest.  
 
-- First, you need to find an API so you can base the development of the webapp around it. The API should allow you to:
-  - Get a list of items with a unique item id (or generate the unique id).
-  - For a given item, get detailed information about it.
+### Project Objectives <a name="project-requirements"></a>
 
-    We recommend that you choose an API that **doesn't need authentication**. if you select an API that requires authentication, you should implement it on your own. Also, if you select an API that provides **image** resources, your webapp will be more visual which will make it more appealing.
+#### API <a name="api"></a>
 
-    Some example APIs are:
+For this project, we explore the use of [Art Institute of Chicago API](https://api.artic.edu/docs/) to build a web application that allows users to view a list of artworks and like them using [Involvement API](https://www.notion.so/869e60b5ad104603aa6db59e08150270). The API provides data about artworks and their authors.
 
-  - [Pokeapi](https://pokeapi.co/): data about the Pokémon world.
-  - [TVmaze API](https://www.tvmaze.com/api): data about TV series and movies.
-  - [Meals DB](https://www.themealdb.com/api.php): data about meals.
+For this particular project, we will use the following endpoints:
+> https://api.artic.edu/api/v1/artworks?page=2&limit=100&fields=id,title,artist_display,date_display,main_reference_number,image_id
 
-You can find more APIs in [this GitHub repo](https://github.com/public-apis/public-apis) or in [ProgrammableWeb](https://www.programmableweb.com/category/all/apis). Some of the APIs require a token, some require authentication, and some others are just open.
+#### User Stories <a name="user-stories"></a>
 
-- You will use our [Involvement API](https://www.notion.so/869e60b5ad104603aa6db59e08150270) to record the different user interactions (likes, comments and reservations).
-
-**Interfaces**
-
-- You should build these interfaces:
+- The following interfaces were built:
   - The *home page*.
   - The *comments popup*.
-  - The *reservations popup* (only for the groups of 3 students).
-- You should follow the layout of the wireframes provided. You should personalize the rest of the design including colors, typographies, spacings, etc.
+  - The *reservations popup*
+- the given [layout](https://github.com/microverseinc/curriculum-javascript/blob/main/group-capstone/buisness_requirements.md#description) was followed with additional personalization(colors, typographies, spacings, etc).
 - Home page
   - When the page loads, the webapp retrieves data from:
     - The selected API and shows the list of items on screen.
@@ -78,28 +73,13 @@ You can find more APIs in [this GitHub repo](https://github.com/public-apis/publ
     - The selected API and shows details about the selected item.
     - The Involvement API to show the item reservations.
   - When the user clicks on the "Reserve" button, the data is recorded in the Involvement API and the screen is updated.
-
-**Counters**
-We have counters in all the interfaces that show:
-
-- The number of items (home).
-- The number of comments (comments popup).
-- The number of reservations (reservations popup) - only for the groups of 3 students.
-
-Even if the API gives you these numbers, you will create a specific function to calculate these numbers on each page. Respect the following rules:
-
-- Each counter should be implemented as a separate module.
-- A counter function should look for specific DOM elements (e.g. for the comments counter it should look for comments) and make the counting based on what is actually displayed on the page.
-- A counter function should cover all the edge cases you can think about.
-
-These counter functions need to be covered with unit tests using Jest. Make sure that you have tests for all edge cases.
-
-**Technical set up**
-
-- Set up the repository on GitHub and use gitflow.
-- Set up webpack.
-- Use modules to organize your code. You should have a separate directory for your modules ( `src/modules`). It is your responsibility to divide your code into logical chunks.
-- Set up a JavaScript testing library (Jest). All your tests should be stored in one directory.
+- We have counters in all the interfaces that show:
+  - The number of items (home).
+  - The number of comments (comments popup).
+  - The number of reservations (reservations popup) - only for the groups of 3 students.
+  - Each counter was implemented as a separate module.
+  - A counter function looks for specific DOM elements (e.g. for the comments counter it should look for comments) and make the counting based on what is actually displayed on the page.
+  - The counter function covers all the edge cases you can think about.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -116,15 +96,22 @@ These counter functions need to be covered with unit tests using Jest. Make sure
 - [Webhint](https://webhint.io/)
 - [Lighthouse](https://ethcar.github.io/lighthouse/)
 - [SASS](https://sass-lang.com/)
-- [API](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3)
+- [API](https://api.artic.edu/docs/)
 
 ### Key Features <a name="key-features"></a>
 
 - [x] Use ES6 modules, with import and export.
+- [x] Use callbacks and promises.
+- [x] Use Webpack to bundle JavaScript.
+- [x] Write units tests for a JavaScript app.
+- [x] Follow Gitflow.
+- [x] Send and receive data from an API.
+- [x] Use API documentation.
+- [x] page counter.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> [Live Demo Link](https://fmanimashaun.github.io/my-spaceship-app/)
+> [Live Demo Link](https://fmanimashaun.github.io/artwork-listing-app/)
 > [Video Demo Link](#)
 
 <p align="center">
@@ -141,7 +128,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup <a name="setup"></a>
 
-- Open your GitHub account the repository's [link](https://github.com/fmanimashaun/my-spaceship-app)
+- Open your GitHub account the repository's [link](https://github.com/fmanimashaun/artwork-listing-app)
 
 ### Prerequisites <a name="prerequisites"></a>
 
@@ -150,7 +137,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Install <a name="install"></a>
 
-- copy the repo's link and clone it by writing `git clone https://github.com/fmanimashaun/my-spaceship-app.git` on your git bash terminal.
+- copy the repo's link and clone it by writing `git clone https://github.com/fmanimashaun/artwork-listing-app.git` on your git bash terminal.
 - `npm install` to install the dependencies.
 
 ### Run tests <a name="run-tests"></a>

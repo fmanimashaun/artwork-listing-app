@@ -1,5 +1,5 @@
 {
-  "name": "my-spaceship-app",
+  "name": "artwork-listing-app",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git+https://github.com/fmanimashaun/my-spaceship-app.git"
+    "url": "git+git+https://github.com/fmanimashaun/artwork-listing-app.git"
   },
   "keywords": [],
   "author": "Engr. Animashaun Fisayo Michael",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fmanimashaun/my-spaceship-app/issues"
+    "url": "https://github.com/fmanimashaun/artwork-listing-app/issues"
   },
-  "homepage": "https://github.com/fmanimashaun/my-spaceship-app#readme",
+  "homepage": "https://github.com/fmanimashaun/artwork-listing-app#readme",
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/plugin-transform-modules-commonjs": "^7.19.6",
