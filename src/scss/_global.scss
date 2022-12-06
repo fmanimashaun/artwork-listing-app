@@ -1,5 +1,6 @@
 /* stylelint-disable at-rule-no-unknown */
 @use './fonts.scss';
+@use './colors.scss';
 
 /* Global styles
 ------------------------------------ */
@@ -16,6 +17,7 @@ body {
   font-family: fonts.$primary-ff;
   /* stylelint-enable csstree/validator */
   font-weight: normal;
+  background-color: colors.$dark;
 }
 
 .container {
