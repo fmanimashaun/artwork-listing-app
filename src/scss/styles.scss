@@ -2,12 +2,34 @@
 @use './global.scss';
 @use './_mixin.scss' as mixins;
 
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  &__logo {
+    font-size: 2.5rem;
+    color: #fff;
+
+    &-img {
+      display: inline-block;
+      width: 40px;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: none;
+    }
+  }
+}
+
 .main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  width: 1000px;
-  margin: 0 auto;
 }
 
 .artwork img {
