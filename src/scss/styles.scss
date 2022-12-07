@@ -2,3 +2,18 @@
 @use './global.scss';
 @use './_mixin.scss' as mixins;
 
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
