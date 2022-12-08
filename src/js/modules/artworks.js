@@ -221,7 +221,7 @@ const data = [
 
 const artworks = () => {
   const artworksHtmlContent = data.map((artwork) => `
-      <figure class="artworks__item">
+      <figure class="artworks__item" id="${artwork.id}">
         <img class="artworks__item-img" src="img/${artwork.image_id}.jpg" alt="${artwork.title}">
         <figcaption class="artworks__item-caption">
           <h2 class="artworks__item-title">${artwork.title}</h2>
