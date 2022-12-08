@@ -17,6 +17,8 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+    max-width: calc(1200px - 20px);
+    margin-inline: auto;
 
     @media only screen and (min-width: 768px) {
       flex-direction: row;
@@ -31,6 +33,10 @@
     align-items: center;
     font-size: 2.5rem;
     color: colors.$light-gray;
+    
+    @media only screen and (min-width: 768px) {
+      padding-inline: 1rem;
+    }
 
     &-img {
       display: inline-block;
@@ -40,8 +46,6 @@
   }
 
   &__nav {
-    margin-block: 1rem;
-
     &-btn {
       position: absolute;
       inset-block-start: 0;
@@ -132,7 +136,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding-block-start: 90px;
+  padding-block-start: 98px;
 }
 
 .artwork img {
