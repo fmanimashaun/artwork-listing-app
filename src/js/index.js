@@ -23,7 +23,7 @@ const data = [
       'drawings (visual works)',
       'prints and drawing',
     ],
-    image_id: '857653de-8087-38f4-0a4c-305862f85154',
+    image_id: '27103',
   },
   {
     id: 25838,
@@ -45,7 +45,7 @@ const data = [
       "world's fairs",
       "Chicago World's Fairs",
     ],
-    image_id: 'ff4eb409-5b54-0443-8c05-270921a5de20',
+    image_id: '25838',
   },
   {
     id: 27281,
@@ -65,7 +65,7 @@ const data = [
       'hats',
       'Joseph Winterbotham Collection',
     ],
-    image_id: 'fdc1a755-ff86-487d-f16b-f03c40a30bee',
+    image_id: '27281',
   },
   {
     id: 28560,
@@ -90,7 +90,7 @@ const data = [
       'beds',
       'bedrooms',
     ],
-    image_id: '25c31d8d-21a4-9ea1-1d73-6a2eca4dda7e',
+    image_id: '28560',
   },
   {
     id: 27954,
@@ -112,7 +112,7 @@ const data = [
       "world's fairs",
       "Chicago World's Fairs",
     ],
-    image_id: '6cb22407-be79-bf0a-1a63-fdf2b99e035b',
+    image_id: '27954',
   },
   {
     id: 34145,
@@ -130,7 +130,7 @@ const data = [
       'fashion',
       'boys',
     ],
-    image_id: 'f1c1fd79-266b-26d8-3c14-ccb4cf3248a6',
+    image_id: '34145',
   },
   {
     id: 45240,
@@ -153,7 +153,7 @@ const data = [
       "world's fairs",
       "Chicago World's Fairs",
     ],
-    image_id: '2e166f7c-a959-d686-eeb0-a63a52a4d368',
+    image_id: '45240',
   },
   {
     id: 41236,
@@ -178,7 +178,7 @@ const data = [
       'weaving',
       '20th Century',
     ],
-    image_id: '4c79f7b4-74fa-19a5-e57f-48a5e192ee5d',
+    image_id: '41236',
   },
   {
     id: 61878,
@@ -200,7 +200,7 @@ const data = [
       'drawings (visual works)',
       'prints and drawing',
     ],
-    image_id: 'ad9f6106-ea49-8b84-ec55-5862f6dce6c6',
+    image_id: '61878',
   },
   {
     id: 62371,
@@ -220,7 +220,7 @@ const data = [
       'women',
       'families',
     ],
-    image_id: '4822cd01-44ac-041a-36b8-c0542377b750',
+    image_id: '62371',
   },
 ];
 
