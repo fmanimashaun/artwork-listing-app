@@ -3,7 +3,7 @@ import '../scss/styles.scss';
 
 import renderHeader from './modules/header.js';
 import removeActive from './modules/removeActive.js';
-import pageNav from './modules/nav.js';
+import pageNav from './modules/pageNav.js';
 import pageRender from './modules/pageRender.js';
 import artworks from './modules/artworks.js';
 

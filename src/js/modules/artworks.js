@@ -227,11 +227,11 @@ const artworks = () => {
           <h2 class="artworks__item-title">${artwork.title}</h2>
           <p>${artwork.artist_display}</p>
           <div class="artworks__item-interact">
-            <button class="artworks__item-btn like">
-              <img src="${likeIcon}" alt="like">
-              <img src="${unLikeIcon}" alt="like">
+            <button class="artworks__item-btn like-btn">
+              <img class="like-img hidden" src="${likeIcon}" alt="like">
+              <img class="like-img" src="${unLikeIcon}" alt="like">
             </button>
-            <button class="artworks__item-btn comment">Comment</button>
+            <button class="artworks__item-btn comment-btn">Comment</button>
           </div>
         </figcaption>
      </figure>
