@@ -1,6 +1,13 @@
 import 'reset-css';
 import '../scss/styles.scss';
 
+import renderHeader from './modules/header.js';
+import removeActive from './modules/removeActive.js';
+import pageNav from './modules/nav.js';
+
+renderHeader();
+
+const tablist = document.querySelectorAll('.header__nav-link');
 const data = [
   {
     id: 27103,
@@ -216,3 +223,5 @@ const data = [
     image_id: '4822cd01-44ac-041a-36b8-c0542377b750',
   },
 ];
+
+pageNav(tablist, removeActive);
