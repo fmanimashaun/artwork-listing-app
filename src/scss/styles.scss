@@ -137,19 +137,34 @@
   }
 }
 
-.main {
+.artworks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding-block-start: 98px;
-}
 
-.artwork img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3/4;
-  object-fit: cover;
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: colors.$light-gray;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+  }
 }
 
 .footer {
