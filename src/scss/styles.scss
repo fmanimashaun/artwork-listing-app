@@ -151,3 +151,23 @@
   aspect-ratio: 3/4;
   object-fit: cover;
 }
+
+.footer {
+  padding: 2rem 1rem;
+
+  &__credit {
+    font-size: 1rem;
+    color: colors.$light-gray;
+    line-height: 1.5em;
+
+    &-link {
+      color: colors.$light-gray;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: colors.$organge-700;
+      }
+    }
+  }
+}
