@@ -1,5 +1,15 @@
 import likeIcon from '../../img/like.svg';
 import unLikeIcon from '../../img/unlike.svg';
+import img25838 from '../../img/demo_img/25838.jpg';
+import img27103 from '../../img/demo_img/27103.jpg';
+import img27281 from '../../img/demo_img/27281.jpg';
+import img27954 from '../../img/demo_img/27954.jpg';
+import img28560 from '../../img/demo_img/28560.jpg';
+import img34145 from '../../img/demo_img/34145.jpg';
+import img41236 from '../../img/demo_img/41236.jpg';
+import img45240 from '../../img/demo_img/45240.jpg';
+import img61878 from '../../img/demo_img/61878.jpg';
+import img62371 from '../../img/demo_img/62371.jpg';
 
 const pageMain = document.querySelector('.main');
 
@@ -18,7 +28,7 @@ const data = [
       'drawings (visual works)',
       'prints and drawing',
     ],
-    image_id: '27103',
+    image_id: img27103,
   },
   {
     id: 25838,
@@ -40,7 +50,7 @@ const data = [
       "world's fairs",
       "Chicago World's Fairs",
     ],
-    image_id: '25838',
+    image_id: img25838,
   },
   {
     id: 27281,
@@ -60,7 +70,7 @@ const data = [
       'hats',
       'Joseph Winterbotham Collection',
     ],
-    image_id: '27281',
+    image_id: img27281,
   },
   {
     id: 28560,
@@ -85,7 +95,7 @@ const data = [
       'beds',
       'bedrooms',
     ],
-    image_id: '28560',
+    image_id: img28560,
   },
   {
     id: 27954,
@@ -107,7 +117,7 @@ const data = [
       "world's fairs",
       "Chicago World's Fairs",
     ],
-    image_id: '27954',
+    image_id: img27954,
   },
   {
     id: 34145,
@@ -125,7 +135,7 @@ const data = [
       'fashion',
       'boys',
     ],
-    image_id: '34145',
+    image_id: img34145,
   },
   {
     id: 45240,
@@ -148,7 +158,7 @@ const data = [
       "world's fairs",
       "Chicago World's Fairs",
     ],
-    image_id: '45240',
+    image_id: img45240,
   },
   {
     id: 41236,
@@ -173,7 +183,7 @@ const data = [
       'weaving',
       '20th Century',
     ],
-    image_id: '41236',
+    image_id: img41236,
   },
   {
     id: 61878,
@@ -195,7 +205,7 @@ const data = [
       'drawings (visual works)',
       'prints and drawing',
     ],
-    image_id: '61878',
+    image_id: img61878,
   },
   {
     id: 62371,
@@ -215,14 +225,14 @@ const data = [
       'women',
       'families',
     ],
-    image_id: '62371',
+    image_id: img62371,
   },
 ];
 
 const artworks = () => {
   const artworksHtmlContent = data.map((artwork) => `
       <figure class="artworks__item" id="${artwork.id}">
-        <img class="artworks__item-img" src="img/${artwork.image_id}.jpg" alt="${artwork.title}">
+        <img class="artworks__item-img" src="${artwork.image_id}" alt="${artwork.title}">
         <figcaption class="artworks__item-caption">
           <h2 class="artworks__item-title">${artwork.title}</h2>
           <p>${artwork.artist_display}</p>
@@ -231,7 +241,7 @@ const artworks = () => {
               <img class="like-img hidden" src="${likeIcon}" alt="like">
               <img class="like-img" src="${unLikeIcon}" alt="like">
             </button>
-            <button class="artworks__item-btn comment-btn">Comment</button>
+            <button class="artworks__item-btn comment">Comment</button>
           </div>
         </figcaption>
      </figure>
