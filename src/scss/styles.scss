@@ -7,13 +7,18 @@
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding: 1rem 10px;
   background-color: colors.$dark;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
   &__logo {
     display: flex;
     flex-flow: row nowrap;
@@ -25,24 +30,80 @@
     &-img {
       display: inline-block;
       width: 40px;
-      height: auto;
+      height: 50px;
     }
   }
 
   &__nav {
+    margin-block: 1rem;
+
     &-btn {
-      background-color: colors.$light-gray;;
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-end: 0;
       border-radius: 5px;
+      width: 50px;
+      height: 50px;
       cursor: pointer;
 
-      .btn-img.close {
-        display: none;
+      & .btn-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &.close {
+        background-color: colors.$light-gray;
+
+        & .btn-img.btn-close {
+          display: none;
+        }
+
+        & .btn-img.btn-open {
+          display: block;
+        }
+      }
+
+      &.open {
+        background-color: transparent;
+
+        & .btn-img.btn-close {
+          display: block;
+        }
+
+        & .btn-img.btn-open {
+          display: none;
+        }
       }
     }
 
     &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
       &.close {
         display: none;
+      }
+    }
+
+    &-item {
+      font-size: 1.5rem;
+      width: 100%;
+    }
+
+    &-link {
+      display: block;
+      padding: 1rem;
+      border-radius: 5px;
+      color: colors.$light-gray;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: colors.$light-gray;
+        color: colors.$dark;
       }
     }
   }
