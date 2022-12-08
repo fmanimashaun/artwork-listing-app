@@ -1,5 +1,6 @@
 import pageRender from './pageRender.js';
 import artworks from './artworks.js';
+import shop from './shop.js';
 
 const pageMain = document.querySelector('.main');
 
@@ -19,7 +20,7 @@ const pageNav = (navItems, removeClass) => {
         removeClass(navItems);
         event.target.classList.add('active');
         pageMain.innerHTML = '';
-        // renderPage(pageMain, renderContact);
+        pageRender(pageMain, shop);
       }
     });
   });

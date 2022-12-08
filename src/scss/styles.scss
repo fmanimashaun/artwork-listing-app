@@ -193,7 +193,7 @@
       color: colors.$dark;
     }
 
-    &-btn.like-btn{
+    &-btn.like-btn {
       background-color: transparent;
       border: none;
       cursor: pointer;
@@ -223,6 +223,23 @@
       }
     }
 
+  }
+}
+
+.shop {
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+    margin-block: 2rem;
+    color: colors.$light-gray;
+  }
+
+  &__content {
+    font-size: 2rem;
+    text-align: center;
+    color: colors.$light-gray;
   }
 }
 
