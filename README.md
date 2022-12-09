@@ -10,10 +10,14 @@
   - [Project Requirements](#project-requirements)
     - [API](#api)
     - [User Stories](#user-stories) 
-  - [🛠 Built With](#built-with)
+- [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+- [🚀 Live Demo](#live-demo)
+- [📸 Screenshots](#screenshots)
+  - [Desktop](#desktop)
+  - [Tablet](#tablet)
+  - [Mobile](#mobile)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -111,11 +115,41 @@ For this particular project, we will use the following endpoints:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+### Live Demo Link <a name="live-demo-link"></a>
 > [Live Demo Link](https://fmanimashaun.github.io/artwork-listing-app/)
+
 > [Video Demo Link](#)
 
+## 📸 Screenshots <a name="screenshots"></a>
+
+### Desktop <a name="desktop"></a>
+
 <p align="center">
-  <img width="500" src="#">
+  <img width="500" src="screenshots/desktop-artworks.png">
+</P>
+
+<p align="center">
+  <img width="500" src="screenshots/desktop-exhibitions.png">
+</P>
+
+### Tablet <a name="tablet"></a>
+
+<p align="center">
+  <img width="300" src="screenshots/tablet-artworks.png">
+</P>
+
+<p align="center">
+  <img width="300" src="screenshots/tablet-exhibitions.png">
+</P>
+
+### Mobile <a name="mobile"></a>
+
+<p align="center">
+  <img width="200" src="screenshots/mobile-artworks.png">
+</P>
+
+<p align="center">
+  <img width="200" src="screenshots/mobile-exhibitions.png">
 </P>
 
 ## 💻 Getting Started <a name="getting-started"></a>
