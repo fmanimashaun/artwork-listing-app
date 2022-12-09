@@ -352,9 +352,8 @@
     align-items: flex-start;
     width: 100%;
     padding-block: 1rem;
-    border-bottom: 1px solid colors.$light-gray;
 
-    & > * {
+    &>* {
       width: 100%;
     }
 
@@ -381,18 +380,38 @@
       row-gap: 12px;
       padding-block: 1rem;
 
-      & > * {
+      &>* {
         width: 100%;
         max-width: 300px;
       }
 
-      & input::placeholder {
-        padding: 1em;
-        font-size: 1.5rem;
-        border: 1px solid colors.$light-gray;
+      & #name,
+      & #comment {
+        display: block;
+        padding: 0.5rem;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 24px;
+        color: colors.$dark;
+        border: 1px solid colors.$dark;
         border-radius: 4px;
-        background-color: red;
+
+        &::placeholder {
+          font-weight: inherit;
+          color: colors.$dark;
+          opacity: 1;
+        }
       }
+
+      & #name {
+        max-width: 150px;
+      }
+    }
+
+    &-btn {
+      width: fit-content;
+      font-size: 1.2rem;
+      padding: 0.5em 2em;
     }
   }
 }
