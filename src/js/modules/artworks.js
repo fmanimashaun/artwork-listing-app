@@ -19,7 +19,7 @@ const artworks = async (dataArr) => {
           </div>
         </figcaption>
      </figure>
-    `);
+    `).filter((artwork) => artwork.image_id !== null);
   pageMain.insertAdjacentHTML('afterbegin', `<div class="artworks">${artworksHtmlContent.join('')}</div>`);
 };
 
