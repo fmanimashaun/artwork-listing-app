@@ -249,7 +249,6 @@
 
 // modal section
 .artworks__modal {
-  // display: none;
   position: fixed;
   z-index: 10;
   width: 100%;
@@ -257,6 +256,10 @@
   padding: 50px 10px;
   background: colors.$light-gray;
   overflow-y: scroll;
+
+  &.close {
+    display: none;
+  }
 
   @media only screen and (min-width: 768px) {
     padding: 50px;
