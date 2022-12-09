@@ -15,7 +15,7 @@ const artworks = async (dataArr) => {
               <img class="like-img hidden" src="${likeIcon}" alt="like">
               <img class="like-img" src="${unLikeIcon}" alt="like">
             </button>
-            <button id ="comment-${artwork.id}"class="artworks__item-btn comment">Comment</button>
+            <button id ="comment-${artwork.id}"class="artworks__item-btn comment-btn">Comment</button>
           </div>
         </figcaption>
      </figure>
