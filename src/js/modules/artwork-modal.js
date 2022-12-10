@@ -1,6 +1,6 @@
 import closeIcon from '../../img/close_gray.svg';
 
-const pageMain = document.querySelector('.main');
+const pageContainer = document.querySelector('.container');
 
 const artworkModal = async (data) => {
   const artworkModalHtmlContent = `
@@ -48,7 +48,7 @@ const artworkModal = async (data) => {
   </div>
 </div>
     `;
-  pageMain.insertAdjacentHTML('afterbegin', `<div class="artworks">${artworksHtmlContent.join('')}</div>`);
+  pageContainer.insertAdjacentHTML('afterbegin', artworkModalHtmlContent);
 };
 
 export default artworkModal;
