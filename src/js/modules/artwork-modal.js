@@ -17,42 +17,30 @@ const artworkModal = async (data) => {
         <p class='artworks__modal-card-origin'><span>Origin:</span>  ${data.place_of_origin}</p>
         <p class='artworks__modal-card-credit'><span>Credit:</span> ${data.credit_line}</p>
     `;
-  const artworkModalHtmlContentPart2 = `
-  <ul class="artworks__modal-card-terms">
-    <li class='artworks__modal-card-terms-item'>watercolor</li>
-    <li class='artworks__modal-card-terms-item'>Century of Progress</li>
-    <li class='artworks__modal-card-terms-item'>paper (fiber product)</li>
-    <li class='artworks__modal-card-terms-item'>watercolor</li>
-    <li class='artworks__modal-card-terms-item'>water-base paint</li>
-    <li class='artworks__modal-card-terms-item'>paint</li>
-    <li class='artworks__modal-card-terms-item'>graphite</li>
-    <li class='artworks__modal-card-terms-item'>drawings (visual works)</li>
-    <li class='artworks__modal-card-terms-item'>prints and drawing</li>
-    <li class='artworks__modal-card-terms-item'>world's fairs</li>
-    <li class='artworks__modal-card-terms-item'>Chicago World's Fairs</li>
-  </ul>
-`;
+  let artworkModalHtmlContentPart2 = data.term_titles.map((term) => `<li class='artworks__modal-card-terms-item'>${term}</li>`).join('');
+  artworkModalHtmlContentPart2 = `<ul class="artworks__modal-card-terms">${artworkModalHtmlContentPart2}</ul>`;
   const artworkModalHtmlContentPart3 = `
-</div>
-<div class="artworks__modal-comments">
-  <h4 class="artworks__modal-comments-title">Comments<span class="artworks__modal-comments-count"></span>:
-  </h4>
-  <div class="artworks__modal-comments-list">
-    <p class='artworks__modal-comments-item'>03/11/2021 Alex: I'd love to buy it!</p>
-    <p class='artworks__modal-comments-item'>03/12/2021 Mia: I love</p>
   </div>
-  <form action="" class="artworks__modal-comments-add">
-    <input type="text" name="name" id="name" placeholder='Your name'>
-    <textarea class='artworks__modal-comments-input' name="message" id="comment" maxlength="500" cols="30"
+  <div class="artworks__modal-comments">
+    <h4 class="artworks__modal-comments-title">Comments<span class="artworks__modal-comments-count"></span>:</h4>
+    <div class="artworks__modal-comments-list">
+      <p class='artworks__modal-comments-item'>03/11/2021 Alex: I'd love to buy it!</p>
+      <p class='artworks__modal-comments-item'>03/12/2021 Mia: I love</p>
+    </div>
+    <form action="" class="artworks__modal-comments-add">
+      <input type="text" name="name" id="name" placeholder='Your name'>
+      <textarea class='artworks__modal-comments-input' name="message" id="comment" maxlength="500" cols="30"
       rows="4" placeholder="Your insights..."></textarea>
-    <input class='artworks__modal-comments-btn' type="submit" value="Comment">
-  </form>
-</div>
-</div>
-</div>
-</div>`;
+      <input class='artworks__modal-comments-btn' type="submit" value="Comment">
+    </form>
+  </div>
+  </div>
+  </div>
+  </div>`;
 
-  const artworkModalHtmlContent = artworkModalHtmlContentPart1 + artworkModalHtmlContentPart2 + artworkModalHtmlContentPart3;
+  const artworkModalHtmlContent = artworkModalHtmlContentPart1
+    + artworkModalHtmlContentPart2
+    + artworkModalHtmlContentPart3;
   pageContainer.insertAdjacentHTML('afterbegin', artworkModalHtmlContent);
 };
 
