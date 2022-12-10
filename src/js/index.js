@@ -21,6 +21,6 @@ pageNav(tablist, removeActive);
 // call data from artworks api and rendering on page;
 fetchData(URL).then((artworkArr) => {
   pageRender(pageMain, artworks, artworkArr.data);
+}).then(() => {
+  commentPopUp();
 });
-
-commentPopUp();
