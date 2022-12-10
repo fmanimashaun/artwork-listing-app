@@ -7,6 +7,7 @@ import pageNav from './modules/pageNav.js';
 import pageRender from './modules/pageRender.js';
 import artworks from './modules/artworks.js';
 import fetchData from './modules/fetchApi.js';
+import commentPopUp from './modules/comment-pop-up.js';
 
 renderHeader();
 
@@ -21,3 +22,5 @@ pageNav(tablist, removeActive);
 fetchData(URL).then((artworkArr) => {
   pageRender(pageMain, artworks, artworkArr.data);
 });
+
+commentPopUp();
