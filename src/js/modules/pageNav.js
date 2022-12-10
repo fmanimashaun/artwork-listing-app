@@ -3,6 +3,7 @@ import artworks from './artworks.js';
 import exhibitions from './exhibitions.js';
 import shop from './shop.js';
 import fetchData from './fetchApi.js';
+import commentPopUp from './comment-pop-up.js';
 
 const pageMain = document.querySelector('.main');
 
@@ -16,6 +17,8 @@ const pageNav = (navItems, removeClass) => {
         const URL = 'https://api.artic.edu/api/v1/artworks?limit=20&fields=id,title,artist_display,place_of_origin,credit_line,term_titles,image_id';
         fetchData(URL).then((artworkArr) => {
           pageRender(pageMain, artworks, artworkArr.data);
+        }).then(() => {
+          commentPopUp();
         });
       } else if (event.target.textContent === 'Exhibitions') {
         removeClass(navItems);
