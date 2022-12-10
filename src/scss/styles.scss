@@ -324,7 +324,6 @@
   }
 }
 
-// modal section
 .artworks__modal {
   position: fixed;
   z-index: 10;
@@ -425,7 +424,7 @@
     }
   }
 
-  &-comments {
+  &-reservations {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -496,7 +495,157 @@
   }
 }
 
-// modal section
+.exhibitions__modal {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  padding: 50px 10px;
+  background: colors.$light-gray;
+  overflow-y: scroll;
+
+  &.close {
+    display: none;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 50px;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 920px;
+    margin-inline: auto;
+    background-color: colors.$light;
+    border: 1px solid colors.$light-gray;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  &-btn {
+    width: fit-content;
+    border-radius: 50%;
+    border: none;
+    margin-left: auto;
+    margin-block-end: 1rem;
+
+    &-img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 12px;
+      padding-block: 1rem;
+      border-bottom: 1px solid colors.$light-gray;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 1.5em;
+      color: colors.$dark;
+    }
+
+    &-description {
+      font-size: 1rem;
+      line-height: 1.5em;
+    }
+  }
+
+  &-reservations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-block: 1rem;
+
+    & > * {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      row-gap: 12px;
+      padding-block: 1rem;
+      border-bottom: 1px solid colors.$light-gray;
+    }
+
+    &-add {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 0.75rem;
+      padding-block: 1rem;
+
+      & > * {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      &-title {
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      & #name,
+      & #start_date,
+      & #end_date {
+        display: block;
+        max-width: 150px;
+        padding: 0.5rem;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 24px;
+        color: colors.$dark;
+        border: 1px solid colors.$dark;
+        border-radius: 4px;
+
+        &::placeholder {
+          font-weight: inherit;
+          color: colors.$dark;
+          opacity: 1;
+        }
+      }
+    }
+
+    &-btn {
+      width: fit-content;
+      font-size: 1.2rem;
+      padding: 0.5em 2em;
+    }
+  }
+}
 
 .footer {
   padding: 2rem 1rem;

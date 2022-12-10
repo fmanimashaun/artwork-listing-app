@@ -1,4 +1,4 @@
-<div class="artworks__modal close">
+<div class="artworks__modal">
       <div class="artworks__modal-wrapper">
         <button class='artworks__modal-btn'>
           <img class='artworks__modal-btn-img' src="img/close_gray.svg" alt="close">
