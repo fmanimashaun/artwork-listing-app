@@ -32,7 +32,7 @@ const exhibitionsCard = (title, id, imgurl, start) => {
   const cancel = document.querySelector('.closed');
   cancel.appendChild(myCancel);
 
-  buttonReservation.addEventListener('click', () => {
+  buttonReservation.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     exhibitionUI(e.target.nextElementSibling.textContent);
   });
