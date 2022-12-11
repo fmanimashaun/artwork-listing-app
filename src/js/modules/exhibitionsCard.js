@@ -1,12 +1,11 @@
 import closeIcon from '../../img/close.svg';
-import exhibitionUI from '../modules/exhibitionUI.js';
+import exhibitionUI from './exhibitionUI.js';
 
 const myCancel = new Image();
 myCancel.src = closeIcon;
 myCancel.classList = ('imgCancel');
 
-const exhibitionsCard = (title, id, image_url, aic_start_at, aic_end_at) => {
-
+const exhibitionsCard = (title, id, imgurl, start) => {
   const board = document.querySelector('.main');
 
   const div = document.createElement('div');
@@ -19,11 +18,11 @@ const exhibitionsCard = (title, id, image_url, aic_start_at, aic_end_at) => {
 
   const img = document.createElement('img');
   img.className = 'exhibitionImg';
-  img.src = image_url;
+  img.src = imgurl;
 
   div.appendChild(img);
-  strDiv.innerHTML = `<span>${title}</span><p>${aic_start_at}</p>`
-  buttonReservation.innerHTML = `<div>Reservations</div><span class='hide'>${id}</span>`
+  strDiv.innerHTML = `<span>${title}</span><p>${start}</p>`;
+  buttonReservation.innerHTML = `<div>Reservations</div><span class='hide'>${id}</span>`;
 
   div.appendChild(strDiv);
   div.appendChild(buttonReservation);
@@ -33,16 +32,15 @@ const exhibitionsCard = (title, id, image_url, aic_start_at, aic_end_at) => {
   const cancel = document.querySelector('.closed');
   cancel.appendChild(myCancel);
 
-  buttonReservation.addEventListener('click', (e) => {
+  buttonReservation.addEventListener('click', () => {
     overlay.style.display = 'block';
     exhibitionUI(e.target.nextElementSibling.textContent);
   });
 
-  cancel.addEventListener('click', (e) => {
+  cancel.addEventListener('click', () => {
     overlay.style.display = 'none';
     document.querySelector('.exhibition-board').innerHTML = '';
   });
-
 };
 
 export default exhibitionsCard;
