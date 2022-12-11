@@ -15,7 +15,7 @@ const header = `
           </button>
           <ul class="header__nav-list close">
             <li class="header__nav-item"><a class='header__nav-link active' href='#'>Artworks</a></li>
-            <li class="header__nav-item"><a class='header__nav-link' href='#'>Exhibitions</a></li>
+            <li class="header__nav-item reservations"><a class='header__nav-link' href='#'>Exhibitions</a></li>
             <li class="header__nav-item"><a class='header__nav-link' href='#'>Shop</a></li>
           </ul>
         </nav>
