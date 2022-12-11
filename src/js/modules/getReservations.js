@@ -3,7 +3,6 @@ const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/
 const getReservations = async (id) => {
   const response = await fetch(`${URL}${id}`);
   const data = await response.json();
-  console.log(data)
   return data;
 };
 
