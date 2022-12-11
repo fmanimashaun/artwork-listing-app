@@ -23,7 +23,7 @@ body {
   font-family: fonts.$primary-ff;
   /* stylelint-enable csstree/validator */
   font-weight: normal;
-  background-color: colors.$dark;
+  background-color: rgb(122, 80, 80, 0.5);
 }
 
 .container {
@@ -36,19 +36,19 @@ body {
   margin-inline: auto;
   padding-inline: 10px;
 
-  &>* {
+  & > * {
     max-width: 100%;
   }
 
-  &>main {
+  & > main {
     margin-block: auto;
   }
 
-  &> :first-child:not(main) {
+  & > :first-child:not(main) {
     margin-block-start: 0;
   }
 
-  &> :last-child:not(main) {
+  & > :last-child:not(main) {
     margin-block-end: 0;
   }
 }

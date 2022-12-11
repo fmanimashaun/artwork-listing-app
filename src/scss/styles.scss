@@ -9,7 +9,7 @@
   inset-inline-start: 0;
   width: 100%;
   padding: 1rem 10px;
-  background-color: rgb(105, 60, 60,0.5);
+  background-color: rgb(105, 60, 60, 0.5);
 
   &__wrapper {
     position: relative;
@@ -66,7 +66,7 @@
       }
 
       &.close {
-        background-color: rgb(105, 60, 60,0.5);
+        background-color: rgb(105, 60, 60, 0.5);
 
         & .btn-img.btn-close {
           display: none;
@@ -126,7 +126,7 @@
 
       &.active,
       &:hover {
-        background-color: rgb(105, 60, 60,0.5);
+        background-color: rgb(105, 60, 60, 0.5);
         color: rgb(255, 255, 255);
       }
 
@@ -157,16 +157,16 @@
 
   &__credit {
     font-size: 1rem;
-    color: rgb(105, 60, 60,0.5);
+    color: rgb(105, 60, 60, 0.5);
     line-height: 1.5em;
 
     &-link {
-      color: rgb(105, 60, 60,0.5);
+      color: rgb(105, 60, 60, 0.5);
       text-decoration: none;
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: rgb(105, 60, 60,0.5);
+        color: rgb(105, 60, 60, 0.5);
       }
     }
   }
