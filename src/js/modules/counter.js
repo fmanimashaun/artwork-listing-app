@@ -1,7 +1,6 @@
-const counter = (targetItem, outputLocation) => {
-  const target = document.querySelector(`.${targetItem}`);
-  const output = document.querySelector(outputLocation);
-  output.innerText = target.childElementCount;
+const counter = (target, output) => {
+  const count = target.length;
+  output.textContent = `(${count})`;
 };
 
 export default counter;
