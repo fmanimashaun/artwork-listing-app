@@ -24,8 +24,6 @@ const artworkModal = async (data) => {
   <div class="artworks__modal-comments">
     <h4 class="artworks__modal-comments-title">Comments<span class="artworks__modal-comments-count"></span>:</h4>
     <div class="artworks__modal-comments-list">
-      <p class='artworks__modal-comments-item'>03/11/2021 Alex: I'd love to buy it!</p>
-      <p class='artworks__modal-comments-item'>03/12/2021 Mia: I love</p>
     </div>
     <form action="" class="artworks__modal-comments-add">
       <input type="text" name="name" id="name" placeholder='Your name'>
