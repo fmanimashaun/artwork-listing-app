@@ -7,7 +7,8 @@ const reservationPopUp = () => {
   reservationBtns.forEach((button) => {
     button.addEventListener('click', (e) => {
       const id = e.target.id.split('-')[1];
-      const URL = `https://api.artic.edu/api/v1/artworks/${id}?fields=id,title,short_description,image_url`;
+      console.log(id);
+      const URL = `https://api.artic.edu/api/v1/exhibitions/${id}?fields=id,title,short_description,image_url`;
       // call data from artworks api and rendering on page;
       fetchData(URL).then((exhibition) => {
         renderModal(reservationModal, exhibition.data);

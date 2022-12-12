@@ -5,6 +5,7 @@ import shop from './shop.js';
 import fetchData from './fetchApi.js';
 import counter from './counter.js';
 import commentPopUp from './commentWindow.js';
+import reservationPopUp from './reservationWindow.js';
 
 const pageMain = document.querySelector('.main');
 
@@ -38,6 +39,8 @@ const pageNav = (navItems, removeClass) => {
           const exhibitionsCount = document.querySelector('.exhibitions__count');
           const exhibitionsCollection = document.querySelectorAll('.exhibitions__item');
           counter(exhibitionsCollection, exhibitionsCount);
+        }).then(() => {
+          reservationPopUp();
         });
       } else if (event.target.textContent === 'Shop') {
         removeClass(navItems);

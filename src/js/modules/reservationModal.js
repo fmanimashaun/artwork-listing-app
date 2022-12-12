@@ -10,7 +10,7 @@ const reservationModal = async (data) => {
           <img class='exhibitions__modal-btn-img' src="${closeIcon}" alt="close">
         </button>
         <div class="exhibitions__modal-card">
-          <img class="exhibitions__modal-card-img" src="${data.image_url}" alt="project artwork">
+          <img class="exhibitions__modal-card-img" src="${data.image_url}" alt="${data.title}">
           <div class="exhibitions__modal-card-details">
             <h3 class="exhibitions__modal-card-title">${data.title}</h3>
             <p class='exhibitions__modal-card-description'>${data.short_description}</p>

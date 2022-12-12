@@ -2,7 +2,7 @@ const pageMain = document.querySelector('.main');
 
 const exhibitions = async (dataArr) => {
   const pageHeader = '<h1 class="exhibitions__title">Exhibitions<span class="exhibitions__count"></span></h1>';
-  const exhibitionsHtmlContent = await dataArr.filter((exhibition) => exhibition.image_url !== null).map((exhibition) => `
+  const exhibitionsHtmlContent = await dataArr.filter((exhibition) => (exhibition.short_description !== null)).map((exhibition) => `
       <figure class="exhibitions__item" id="${exhibition.id}">
         <img class="exhibitions__item-img" src="${exhibition.image_url}" alt="${exhibition.title}">
         <figcaption class="exhibitions__item-caption">
