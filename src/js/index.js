@@ -24,9 +24,8 @@ fetchData(URL).then((artworkArr) => {
   pageRender(pageMain, artworks, artworkArr.data);
 }).then(() => {
   commentPopUp();
-  });
+});
 
-  const artworksCount = document.querySelector('.artworks__count');
-  const artworkCollection = document.querySelectorAll('.artworks__item');
-  counter(artworkCollection, artworksCount);
-
+const artworksCount = document.querySelector('.artworks__count');
+const artworkCollection = document.querySelectorAll('.artworks__item');
+counter(artworkCollection, artworksCount);

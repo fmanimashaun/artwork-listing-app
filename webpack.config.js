@@ -12,6 +12,7 @@ module.exports = {
     maxEntrypointSize: 1000000,
     hints: 'warning',
   },
+  devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
