@@ -1,5 +1,6 @@
 import 'reset-css';
 import '../scss/styles.scss';
+import counter from './modules/counter.js';
 
 import renderHeader from './modules/header.js';
 import removeActive from './modules/removeActive.js';
@@ -23,4 +24,9 @@ fetchData(URL).then((artworkArr) => {
   pageRender(pageMain, artworks, artworkArr.data);
 }).then(() => {
   commentPopUp();
-});
+  });
+
+  const artworksCount = document.querySelector('.artworks__count');
+  const artworkCollection = document.querySelectorAll('.artworks__item');
+  counter(artworkCollection, artworksCount);
+

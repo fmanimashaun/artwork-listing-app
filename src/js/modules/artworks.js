@@ -4,6 +4,7 @@ import unLikeIcon from '../../img/unlike.svg';
 const pageMain = document.querySelector('.main');
 
 const artworks = async (dataArr) => {
+  const pageHeader = '<h1 class="artworks__title">Artworks<span class="artworks__count"></span></h1>';
   const artworksHtmlContent = await dataArr.filter((artwork) => artwork.image_id !== null).map((artwork) => `
       <figure class="artworks__item" id="${artwork.id}">
         <img class="artworks__item-img" src="https://www.artic.edu/iiif/2/${artwork.image_id}/full/600,/0/default.jpg" alt="${artwork.title}">
@@ -20,7 +21,7 @@ const artworks = async (dataArr) => {
         </figcaption>
      </figure>
     `);
-  pageMain.insertAdjacentHTML('afterbegin', `<div class="artworks">${artworksHtmlContent.join('')}</div>`);
+  pageMain.insertAdjacentHTML('afterbegin', `<div class='artworks'>${pageHeader}<div class="artworks__wrapper">${artworksHtmlContent.join('')}</div></div>`);
 };
 
 export default artworks;
