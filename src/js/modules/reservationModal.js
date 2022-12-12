@@ -1,15 +1,19 @@
-<div class="exhibitions__modal">
+import closeIcon from '../../img/close_gray.svg';
+
+const pageContainer = document.querySelector('.container');
+
+const reservationModal = async (data) => {
+  const reservationModalHtmlContent = `
+    <div class="exhibitions__modal">
       <div class="exhibitions__modal-wrapper">
         <button class='exhibitions__modal-btn'>
-          <img class='exhibitions__modal-btn-img' src="img/close_gray.svg" alt="close">
+          <img class='exhibitions__modal-btn-img' src="${closeIcon}" alt="close">
         </button>
         <div class="exhibitions__modal-card">
-          <img class="exhibitions__modal-card-img" src="https://artic-web.imgix.net/37c66b6f-5c96-44b0-9a18-6d0d13885947/G28216-int-Press300ppi%2C3000px%2CsRGB%2CJPEG.jpg?auto=compress%2Cformat&fit=min&fm=jpg&q=80&rect=41%2C782%2C2918%2C1640" alt="project artwork">
+          <img class="exhibitions__modal-card-img" src="${data.image_url}" alt="project artwork">
           <div class="exhibitions__modal-card-details">
-            <h3 class="exhibitions__modal-card-title">Van Gogh and the Avant-Garde: The Modern Landscape</h3>
-            <p class='exhibitions__modal-card-description'>Works by Post-Impressionist artists Vincent van Gogh, Georges Seurat, Paul Signac, Emile Bernard, and Charles Angrand
-            come together to reveal how the visual vocabulary of Paris's industrialized suburbs—bridges, embankments, factories,
-            parks, and villages—became vehicles for experimentation and innovation.</p>
+            <h3 class="exhibitions__modal-card-title">${data.title}</h3>
+            <p class='exhibitions__modal-card-description'>${data.short_description}</p>
           </div>
           <div class="exhibitions__modal-reservations">
             <h4 class="exhibitions__modal-reservations-title">Reservations<span class="exhibitions__modal-reservations-count"></span>:
@@ -29,3 +33,8 @@
         </div>
       </div>
     </div>
+  `;
+  pageContainer.insertAdjacentHTML('afterbegin', reservationModalHtmlContent);
+};
+
+export default reservationModal;
