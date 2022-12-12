@@ -7,11 +7,6 @@ module.exports = {
   devServer: {
     static: './dist',
   },
-  performance: {
-    maxAssetSize: 1000000,
-    maxEntrypointSize: 1000000,
-    hints: 'warning',
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
