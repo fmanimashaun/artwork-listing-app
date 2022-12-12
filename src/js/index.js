@@ -8,6 +8,7 @@ import pageNav from './modules/pageNav.js';
 import pageRender from './modules/pageRender.js';
 import artworks from './modules/artworks.js';
 import fetchData from './modules/fetchApi.js';
+import commentPopUp from './modules/commentWindow.js';
 
 renderHeader();
 
@@ -25,4 +26,6 @@ fetchData(URL).then((artworkArr) => {
   const artworksCount = document.querySelector('.artworks__count');
   const artworkCollection = document.querySelectorAll('.artworks__item');
   counter(artworkCollection, artworksCount);
+}).then(() => {
+  commentPopUp();
 });

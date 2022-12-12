@@ -4,6 +4,7 @@ import exhibitions from './exhibitions.js';
 import shop from './shop.js';
 import fetchData from './fetchApi.js';
 import counter from './counter.js';
+import commentPopUp from './commentWindow.js';
 
 const pageMain = document.querySelector('.main');
 
@@ -22,6 +23,8 @@ const pageNav = (navItems, removeClass) => {
           const artworksCount = document.querySelector('.artworks__count');
           const artworkCollection = document.querySelectorAll('.artworks__item');
           counter(artworkCollection, artworksCount);
+        }).then(() => {
+          commentPopUp();
         });
       } else if (event.target.textContent === 'Exhibitions') {
         removeClass(navItems);
