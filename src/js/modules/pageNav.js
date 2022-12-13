@@ -32,7 +32,7 @@ const pageNav = (navItems, removeClass) => {
         event.target.classList.add('active');
         pageMain.innerHTML = '';
         // call data from exhibition api and rendering on page;
-        const URL = 'https://api.artic.edu/api/v1/exhibitions?limit=20&fields=id,title,image_url';
+        const URL = 'https://api.artic.edu/api/v1/exhibitions?limit=20&fields=id,title,image_url,short_description';
         fetchData(URL).then((exhibitionArr) => {
           pageRender(pageMain, exhibitions, exhibitionArr.data);
         }).then(() => {
