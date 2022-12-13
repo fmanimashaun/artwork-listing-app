@@ -1,6 +1,8 @@
 import fetchData from './fetchApi.js';
 import artworkModal from './artworkModal.js';
 import renderModal from './renderModal.js';
+import getCommentList from './getComments.js';
+import addComment from './addComment.js';
 
 const commentPopUp = () => {
   const commentBtns = document.querySelectorAll('.comment-btn');
@@ -11,14 +13,21 @@ const commentPopUp = () => {
       // call data from artworks api and rendering on page;
       fetchData(URL).then((artwork) => {
         renderModal(artworkModal, artwork.data);
-      }).then(() => {
-        const modelwindow = document.querySelector('.artworks__modal');
-        const pageContainer = document.querySelector('.container');
-        const closeBtn = document.querySelector('.artworks__modal-btn');
-        closeBtn.addEventListener('click', () => {
-          pageContainer.removeChild(modelwindow);
+      })
+        .then(() => {
+          const modelwindow = document.querySelector('.artworks__modal');
+          const pageContainer = document.querySelector('.container');
+          const closeBtn = document.querySelector('.artworks__modal-btn');
+          closeBtn.addEventListener('click', () => {
+            pageContainer.removeChild(modelwindow);
+          });
+        })
+        .then(() => {
+          getCommentList(id);
+        })
+        .then(() => {
+          addComment(id);
         });
-      });
     });
   });
 };

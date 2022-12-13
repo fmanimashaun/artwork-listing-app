@@ -23,13 +23,13 @@ const artworkModal = async (data) => {
   </div>
   <div class="artworks__modal-comments">
     <h4 class="artworks__modal-comments-title">Comments<span class="artworks__modal-comments-count"></span>:</h4>
-    <div class="artworks__modal-comments-list">
-    </div>
+    <ul class="artworks__modal-comments-list">
+    </ul>
     <form action="" class="artworks__modal-comments-add">
-      <input type="text" name="name" id="name" placeholder='Your name'>
+      <input type="text" name="name" id="name" placeholder='Your name' required>
       <textarea class='artworks__modal-comments-input' name="message" id="comment" maxlength="500" cols="30"
-      rows="4" placeholder="Your insights..."></textarea>
-      <input class='artworks__modal-comments-btn' type="submit" value="Comment">
+      rows="4" placeholder="Your insights..." required></textarea>
+      <input id="submit-${data.id}" class='artworks__modal-comments-btn' type="submit" value="Comment">
     </form>
   </div>
   </div>
