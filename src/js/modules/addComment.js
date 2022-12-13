@@ -1,4 +1,5 @@
 import postApi from './postApi.js';
+import counter from './counter.js';
 
 const addComment = async (id) => {
   const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/yf6dqoUrsU3EfHXvC1i4/comments';
@@ -26,6 +27,10 @@ const addComment = async (id) => {
       </li>
       `;
       commentList.innerHTML += commentListContent;
+
+      const commentCount = document.querySelector('.artworks__modal-comments-count');
+      const commentItems = document.querySelectorAll('.artworks__modal-comments-item');
+      counter(commentItems, commentCount);
     });
   });
 };

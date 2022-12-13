@@ -3,6 +3,7 @@ import artworkModal from './artworkModal.js';
 import renderModal from './renderModal.js';
 import getCommentList from './getComments.js';
 import addComment from './addComment.js';
+import counter from './counter.js';
 
 const commentPopUp = () => {
   const commentBtns = document.querySelectorAll('.comment-btn');

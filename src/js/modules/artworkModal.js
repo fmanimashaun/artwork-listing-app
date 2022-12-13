@@ -22,7 +22,7 @@ const artworkModal = async (data) => {
   const artworkModalHtmlContentPart3 = `
   </div>
   <div class="artworks__modal-comments">
-    <h4 class="artworks__modal-comments-title">Comments<span class="artworks__modal-comments-count"></span>:</h4>
+    <h4 class="artworks__modal-comments-title">Comments <span class="artworks__modal-comments-count"></span>:</h4>
     <ul class="artworks__modal-comments-list">
     </ul>
     <form action="" class="artworks__modal-comments-add">
