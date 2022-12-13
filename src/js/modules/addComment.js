@@ -1,5 +1,4 @@
 import postApi from './postApi.js';
-import getCommentList from './getComments.js';
 
 const addComment = async (id) => {
   const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/yf6dqoUrsU3EfHXvC1i4/comments';
