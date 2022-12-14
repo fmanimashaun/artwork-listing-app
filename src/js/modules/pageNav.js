@@ -5,6 +5,7 @@ import shop from './shop.js';
 import fetchData from './fetchApi.js';
 import counter from './counter.js';
 import commentPopUp from './commentWindow.js';
+import reservationPopUp from './reservationWindow.js';
 
 const pageMain = document.querySelector('.main');
 
@@ -31,13 +32,15 @@ const pageNav = (navItems, removeClass) => {
         event.target.classList.add('active');
         pageMain.innerHTML = '';
         // call data from exhibition api and rendering on page;
-        const URL = 'https://api.artic.edu/api/v1/exhibitions?limit=20&fields=id,title,image_url';
+        const URL = 'https://api.artic.edu/api/v1/exhibitions?limit=20&fields=id,title,image_url,short_description';
         fetchData(URL).then((exhibitionArr) => {
           pageRender(pageMain, exhibitions, exhibitionArr.data);
         }).then(() => {
           const exhibitionsCount = document.querySelector('.exhibitions__count');
           const exhibitionsCollection = document.querySelectorAll('.exhibitions__item');
           counter(exhibitionsCollection, exhibitionsCount);
+        }).then(() => {
+          reservationPopUp();
         });
       } else if (event.target.textContent === 'Shop') {
         removeClass(navItems);
