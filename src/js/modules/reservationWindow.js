@@ -1,6 +1,7 @@
 import fetchData from './fetchApi.js';
 import reservationModal from './reservationModal.js';
 import renderModal from './renderModal.js';
+import getReservationList from './getReservation.js';
 
 const reservationPopUp = () => {
   const reservationBtns = document.querySelectorAll('.reserve-btn');
@@ -18,6 +19,8 @@ const reservationPopUp = () => {
         closeBtn.addEventListener('click', () => {
           pageContainer.removeChild(modelwindow);
         });
+      }).then(() => {
+        getReservationList(id);
       });
     });
   });

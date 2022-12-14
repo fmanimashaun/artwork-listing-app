@@ -18,10 +18,7 @@ const reservationModal = async (data) => {
           <div class="exhibitions__modal-reservations">
             <h4 class="exhibitions__modal-reservations-title">Reservations<span class="exhibitions__modal-reservations-count"></span>:
             </h4>
-            <div class="exhibitions__modal-reservations-list">
-              <p class='exhibitions__modal-reservations-item'>03/11/2021 - 03/12/2021 by Alex</p>
-              <p class='exhibitions__modal-reservations-item'>03/14/2021 - 03/16/2021 by Mia</p>
-            </div>
+            <ul class="exhibitions__modal-reservations-list"></ul>
             <form action="" class="exhibitions__modal-reservations-add">
               <h4 class="exhibitions__modal-reservations-add-title">Add a reservation:</h4>
               <input type="text" name="name" id="name" placeholder='Your name'>
