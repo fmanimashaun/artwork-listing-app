@@ -17,21 +17,22 @@ const addComment = async (id) => {
 
     postApi(URL, commentObj).then(() => {
       commentForm.reset();
-    }).then(() => {
-      const commentList = document.querySelector('.artworks__modal-comments-list');
-      const currentDate = new Date();
-      const dateString = currentDate.toISOString().split('T')[0];
-      const commentListContent = `
+    })
+      .then(() => {
+        const commentList = document.querySelector('.artworks__modal-comments-list');
+        const currentDate = new Date();
+        const dateString = currentDate.toISOString().split('T')[0];
+        const commentListContent = `
         <li class="artworks__modal-comments-item">
         ${dateString} ${commentObj.username}: ${commentObj.comment}
       </li>
       `;
-      commentList.innerHTML += commentListContent;
+        commentList.innerHTML += commentListContent;
 
-      const commentCount = document.querySelector('.artworks__modal-comments-count');
-      const commentItems = document.querySelectorAll('.artworks__modal-comments-item');
-      counter(commentItems, commentCount);
-    });
+        const commentCount = document.querySelector('.artworks__modal-comments-count');
+        const commentItems = document.querySelectorAll('.artworks__modal-comments-item');
+        counter(commentItems, commentCount);
+      });
   });
 };
 

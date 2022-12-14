@@ -2,6 +2,7 @@ import fetchData from './fetchApi.js';
 import reservationModal from './reservationModal.js';
 import renderModal from './renderModal.js';
 import getReservationList from './getReservation.js';
+import addReservation from './addReservation.js';
 
 const reservationPopUp = () => {
   const reservationBtns = document.querySelectorAll('.reserve-btn');
@@ -12,16 +13,21 @@ const reservationPopUp = () => {
       // call data from artworks api and rendering on page;
       fetchData(URL).then((exhibition) => {
         renderModal(reservationModal, exhibition.data);
-      }).then(() => {
-        const modelwindow = document.querySelector('.exhibitions__modal');
-        const pageContainer = document.querySelector('.container');
-        const closeBtn = document.querySelector('.exhibitions__modal-btn');
-        closeBtn.addEventListener('click', () => {
-          pageContainer.removeChild(modelwindow);
+      })
+        .then(() => {
+          const modelwindow = document.querySelector('.exhibitions__modal');
+          const pageContainer = document.querySelector('.container');
+          const closeBtn = document.querySelector('.exhibitions__modal-btn');
+          closeBtn.addEventListener('click', () => {
+            pageContainer.removeChild(modelwindow);
+          });
+        })
+        .then(() => {
+          getReservationList(id);
+        })
+        .then(() => {
+          addReservation(id);
         });
-      }).then(() => {
-        getReservationList(id);
-      });
     });
   });
 };
