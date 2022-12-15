@@ -221,6 +221,10 @@
       border: none;
       cursor: pointer;
 
+      &:hover .like-img {
+        filter: invert(13%) sepia(94%) saturate(7466%) hue-rotate(0deg) brightness(94%) contrast(115%);
+      }
+
       & .like-img {
         display: inline-block;
         width: 30px;
